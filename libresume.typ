@@ -169,7 +169,7 @@
   set text(
     size: 10pt,
     fill: theme.neutral.s600,
-    font: "Bitter Pro",
+    font: theme.font-body,
     weight: 500,
   )
 
