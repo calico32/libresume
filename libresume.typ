@@ -157,6 +157,7 @@
 
   list(
     marker: fa-chevron-right(size: 9pt),
+    indent: 0.1in,
     ..details,
   )
 }
