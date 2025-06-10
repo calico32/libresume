@@ -4,11 +4,16 @@
 = John Doe
 
 #resume-info(
-  resume-email("jdoe@example.com"),
+  resume-email("johndoe@example.com"),
   resume-phone("555-555-5555"),
   resume-linkedin("johndoe"),
   resume-github("johndoe"),
-  resume-website("https://example.com"),
+  resume-website("https://johndoe.com"),
+  resume-location("Anytown, USA"),
+  resume-twitter("@johndoe"),
+  resume-bluesky("@johndoe.bsky.social"),
+  resume-orcid("0000-0001-2345-6789"),
+  resume-keybase("johndoe"),
 )
 
 #resume-tagline(lorem(30))
@@ -55,7 +60,7 @@
   [Python, Flask, React],
   (
     lorem(20),
-    lorem(30),
+    lorem(15),
   ),
 )
 
@@ -78,8 +83,8 @@
   [Jun 2023 -- Aug 2023],
   [Anytown, USA],
   (
+    lorem(29),
     lorem(20),
-    lorem(30),
   ),
 )
 #resume-experience(

@@ -65,19 +65,51 @@
 #let resume-linkedin(slug) = resume-info((
   icon: fa-linkedin,
   content: slug,
-  href: "https://www.linkedin.com/in/" + slug,
+  href: "https://www.linkedin.com/in/"
+    + slug.replace(regex("^https?://(www\.)?linkedin\.com/in/"), ""),
 ))
 
 #let resume-github(username) = resume-info((
   icon: fa-github,
   content: username,
-  href: "https://github.com/" + username,
+  href: "https://github.com/"
+    + username.replace(regex("^https?://(www\.)?github\.com/"), ""),
 ))
 
 #let resume-website(url) = resume-info((
   icon: fa-globe,
   content: url.replace(regex("^https?://"), ""),
   href: url,
+))
+
+#let resume-location(location) = resume-info((
+  icon: fa-map-marker-alt,
+  content: location,
+))
+
+#let resume-twitter(handle) = resume-info((
+  icon: fa-twitter,
+  content: handle,
+  href: "https://twitter.com/" + handle.replace(regex("^@"), ""),
+))
+
+#let resume-bluesky(handle) = resume-info((
+  icon: fa-bluesky,
+  content: handle,
+  href: "https://bsky.app/profile/" + handle.replace(regex("^@"), ""),
+))
+
+#let resume-orcid(id) = resume-info((
+  icon: fa-orcid,
+  content: id,
+  href: "https://orcid.org/"
+    + id.replace(regex("^https?://(www\.)?orcid\.org/"), ""),
+))
+
+#let resume-keybase(handle) = resume-info((
+  icon: fa-keybase,
+  content: handle,
+  href: "https://keybase.io/" + handle.replace(regex("^@"), ""),
 ))
 
 #let resume-tagline(content) = {
