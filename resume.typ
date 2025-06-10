@@ -16,7 +16,7 @@
   resume-keybase("johndoe"),
 )
 
-#resume-tagline(lorem(30))
+#resume-summary(lorem(30))
 
 == Education
 

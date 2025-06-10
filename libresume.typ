@@ -112,7 +112,7 @@
   href: "https://keybase.io/" + handle.replace(regex("^@"), ""),
 ))
 
-#let resume-tagline(content) = {
+#let resume-summary(content) = {
   text(content, size: 11pt)
 }
 
