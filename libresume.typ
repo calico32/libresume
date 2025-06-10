@@ -24,14 +24,16 @@
       } else if (
         type(it) == array and type(it.at(0)) == function and it.len() >= 2
       ) {
-        it.at(0)(fill: theme.primary.s700)
-        if it.len() == 3 {
-          link(it.at(2), box(it.at(1)))
-        } else {
-          box(it.at(1))
-        }
+        box[
+          #it.at(0)(fill: theme.primary.s700)
+          #if it.len() == 3 {
+            link(it.at(2), it.at(1))
+          } else {
+            it.at(1)
+          }
+        ]
       } else if type(it) == dictionary {
-        box([
+        box[
           #if "icon" in it and type(it.icon) == function {
             (it.icon)(fill: theme.primary.s700)
           }
@@ -40,7 +42,7 @@
           } else {
             it.content
           }
-        ])
+        ]
       } else {
         panic("Invalid argument for resume-info", repr(it))
       }
